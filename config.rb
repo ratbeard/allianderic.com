@@ -75,3 +75,20 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+
+# Amazon S3 deploy
+#
+# secrets.rb is not checked in to the repo and should contain:
+#
+#    S3_KEY = 'xxx'
+#    S3_SECRET = 'xxx'
+load 'secrets.rb'
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                = 'www.allianderic.com' # The name of the S3 bucket you are targetting. This is globally unique.
+  s3_sync.region                = 'us-west-2'     # The AWS region for your bucket.
+  s3_sync.aws_access_key_id     = S3_KEY
+  s3_sync.aws_secret_access_key = S3_SECRET
+  s3_sync.delete                = true # We delete stray files by default.
+  s3_sync.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
+end
