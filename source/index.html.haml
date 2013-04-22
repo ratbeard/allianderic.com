@@ -1,0 +1,249 @@
+---
+layout: false
+---
+
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => "utf-8" }
+    %title Mike &amp; Carolyn - 10/15/2011
+    = stylesheet_link_tag "all.css"
+    = yield_content :head
+    /
+      ,--.    ,--.                           ,-----.,--.                           ,------. ,--.
+      |  |    |  | ,---.,--.  ,--.,---.     '  .--./|  ,---. ,--.,--.,--,--,--.    |  .--. '|  | ,--,--.,--.--.
+      |  |    |  || .-. |\  `'  /| .-. :    |  |    |  .-.  ||  ||  ||        |    |  '--' ||  |' ,-.  ||  .--'
+      |  |    |  |' '-' ' \    / \   --.    '  '--'\|  | |  |'  ''  '|  |  |  |    |  | --' |  |\ '-'  ||  |
+      `--'    `--' `---'   `--'   `----'     `-----'`--' `--' `----' `--`--`--'    `--'     `--' `--`--'`--'
+    /[if lte IE 8]
+      %script{ :src => "javascripts/html5.js" }
+
+    %script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3017481-3']);
+      _gaq.push(['_setDomainName', '.mikecarolyn.com']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  %body{ :class => page_classes }
+    #container
+      %header
+        = image_tag "us.jpg", :width => 950, :height => 226, :alt => "Mike and Carolyn smooching in the slums"
+        %h1 Mike & Carolyn
+        %time 10/15/2011
+      .left-col
+        %section.places
+          / %h2 Locations
+          %ul.links
+            %li.active
+              %a{:href => '#ceremony'} Ceremony
+            %li
+              %a{:href => '#reception'} Reception
+            %li
+              %a{:href => '#rehearsal'} Rehearsal Dinner
+            %li
+              %a{:href => '#accommodations'} Accommodations
+
+          %ul.content
+            %li#ceremony.active
+              %p
+                The ceremony will take place at <strong>Lake of the Isles Lutheran Church</strong>
+              = image_tag 'church.jpeg'
+              %p
+                The church is located at
+                %a.address{:target => 'blank', :href => "http://maps.google.com/maps?hl=en&ie=UTF8&q=like+of+the+isles+lutheran&fb=1&gl=us&hq=like+of+the+isles+lutheran&hnear=0x52b333909377bbbd:0x939fc9842f7aee07,Minneapolis,+MN&cid=0,0,11548173723552627775&ll=44.962126,-93.305147&spn=0.008761,0.01929&z=16"}
+                  2020 West Lake of the Isles Parkway, Minneapolis, MN.
+              %p
+                There will be plenty of off street parking on West Lake Street as well as 21st Street and Newton Ave S.
+              %p
+                Rich Phenow will be officiating.
+
+            %li#reception
+              %p
+                The reception will take place at the <strong>Calhoun Beach Club</strong>
+              = image_tag 'calhoun.jpeg'
+              %p
+                Located at
+                %a.address{:target => 'blank', :href => 'http://maps.google.com/maps?um=1&ie=UTF-8&q=calhoun+beach+club&fb=1&gl=us&hq=calhoun+beach+club&hnear=0x52b333909377bbbd:0x939fc9842f7aee07,Minneapolis,+MN&cid=0,0,14486048597914593360&ei=C_zaTfq3MILq0gHtpOH8Aw&sa=X&oi=local_result&ct=image&resnum=4&ved=0CEoQnwIwAw'}
+                  2925 Dean Parkway, Minneapolis, MN
+              %p
+                Complimentary Valet parking will be available at the entrance.
+
+            %li#rehearsal
+              %p
+                The rehearsal dinner will take place at <strong><a href="http://www.pinstripes.com/index.html">Pinstripes</a></strong>.
+              = image_tag 'pinstripes.jpeg'
+              %p
+                Located at
+                %a.address{:target => 'blank', :href => 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=pinstripes&aq=&sll=44.951269,-93.31388&sspn=0.007714,0.01929&gl=us&ie=UTF8&hq=pinstripes&hnear=&ll=44.910359,-93.320618&spn=0.129596,0.308647&z=12&iwloc=A'}
+                  3849 Gallagher Drive, Edina, MN
+              %p
+                Additional details for those attending will be sent in a formal invitation.
+
+            %li#accommodations
+              %p
+                Friends and family can stay at the <strong>Westin</strong> in Edina.
+              = image_tag 'westin.jpeg'
+              %p
+                Located at
+                %a.address{:target => 'blank', :href => 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=westin+edina&aq=&sll=44.878255,-93.322699&sspn=0.007724,0.01929&gl=us&ie=UTF8&hq=westin+edina&hnear=&ll=44.878255,-93.322699&spn=0.007724,0.01929&z=16&iwloc=A'}
+                  3201 Galleria, Edina, MN
+              %p
+                You can reserve a room at our group rate of $119
+                <a href="http://www.starwoodmeeting.com/Book/FRAWLEYEUSON" target="blank"> here</a> by clicking the <em>Book Now</em> button
+                (Note - this link isn't working in Chrome).  Please book your room by September 19th to get the group rate.
+              %p
+                Shuttle transportation will be provided from the Westin to the Ceremony and Reception.
+                Transportation will also leave from the Reception back to the Hotel two times throughout the evening.
+
+        %section.registered
+          %h2 Registry
+          %p
+            We are registered at
+
+            %a.crate{:target => '_blank', :href => 'http://www.crateandbarrel.com/Gift-Registry/Guest/View-Registry.aspx?grid=4718512'}= image_tag "crate_and_barrel.gif"
+            %a.macys{:target => '_blank', :href => 'http://www1.macys.com/registry/wedding/guest/?registryId=466480'}= image_tag "macys.png"
+            %a.target{:target => '_blank', :href => 'http://www.target.com/RegistryGiftGiverCmd?isPreview=false&status=completePageLink&listId=8GoMRzoUspbJy0gjaqYAJw&registryType=WD&isAjax=false'}= image_tag "target.gif"
+
+
+
+      .right-col
+        %section.people
+
+          %h2 About Us
+          %p
+            We’ve known each other since middle school but it all started with holding hands
+            at Cheapskate Rollergarden at a 9th grade birthday party - Carolyn formed a crush but Mike needed a little more time. Fast
+            forward to a college house party sophomore year when we rekindled the original sparks from our former roller skating days,
+            and the rest is history. We are so excited to celebrate our marriage with all of our Friends and Family. See you in October!
+
+          %h2 Wedding Party
+          %ul.links
+            %li.active
+              %a{:href => '#alli'}= image_tag "alli.png"
+            %li
+              %a{:href => '#christine'}= image_tag 'christine.jpg'
+            %li
+              %a{:href => '#kathryn'}= image_tag 'kathryn.jpg'
+            %li
+              %a{:href => '#kristina'}= image_tag 'kristina.jpg'
+            %li.last
+              %a{:href => '#amanda'}= image_tag "amanda.jpg"
+
+
+            %li
+              %a{:href => '#jeff'}= image_tag "bro.jpg"
+            %li
+              %a{:href => '#steve'}= image_tag "steve.jpg"
+            %li
+              %a{:href => '#drew'}= image_tag "drew.jpg"
+            %li
+              %a{:href => '#reed'}= image_tag "reed.jpg"
+            %li.last
+              %a{:href => '#justin'}= image_tag "justin.jpg"
+
+          %ul.content
+            %li#alli.active
+              %h3 Alli Euson, <em>Maid of honor</em>
+              %p
+              My first memories with Carolyn involve a lot of bullying. Soon after I was born, Carolyn requested that we get rid of me.
+              Unfortunately that didn’t work for her, but it didn’t take long for the tables to turn 12 years later when my best friend
+              Alex and I often locked Carolyn in the closet. After a few more battles in high school, Carolyn soon became my steady
+              ground and a person I can’t imagine living without. Whether it’s venting after a stressful day, biking on the Greenway,
+              attending her Cooking 101 class, traveling around Spain, or a Friday night happy hour tour, I love to be with Carolyn. I
+              will miss her as I move off to Austin, TX, but know that we have a lifetime of fun ahead of us.
+
+
+
+            %li#kristina
+              %h3 Kristina Redgrave
+              %p
+                Carolyn and I have known each other for almost 20 years. We first met when we were both living in Kentucky and were reunited
+                at the skating rink in Minnesota -- we have been friends ever since! We have spent hours together forming our own nonprofit,
+                going on adventures, cooking and eating new recipes, and as children reenacting American Girl Doll plays.
+
+            %li#kathryn
+              %h3 Kathryn Scharton
+              %p
+                Carolyn and I first met almost 15 years ago in 7th grade while taking downhill skiing lessons. At the time, I
+                loved Carolyn's silliness and confidence and we became fast friends! Since then, we have grown even closer with many
+                sleep overs, cooking lessons, ladies' nights, and travels punctuating our friendship. I can't wait for Carolyn and
+                Mike's big day!
+
+            %li#christine
+              %h3 Christine Duquette
+              %p
+                It would be impossible to sum up my relationship with Carolyn into 3 sentences but I will try. I really got to know
+                Carolyn when we were both boy magnets in the same ski club during middle school.  Since then I lived with CC for three years
+                after college and became even closer. Even though I currently live in Philadelphia I know we will be close friends for
+                life. I feel so fortunate to be a part of Mike and Carolyn's big day.
+
+            %li#amanda
+              %h3 Amanda Stoermer
+              %p
+                I first met Eus, 8 years ago, on the first day of our freshman year at DePauw University. Our rooms were directly next to
+                each other and we had so much fun together that we decided to be roommates our sophomore year. Some of my favorite
+                memories with Carolyn include learning to navigate frat parties together, her AXΩ initiation, random dance parties in our
+                room, her visiting me in Spain and my visits to see her in MN. I loved witnessing the very beginning of Carolyn & Mike’s
+                relationship when they would write to each other long distance and now I can’t wait to be there as they exchange their
+                wedding vows!
+
+
+
+            %li#jeff
+              %h3 Jeff Frawley, <em>Best Man</em>
+              %p
+                I'm honored to say that I've known Mike the longest, back to when we were kids studying Mortal Kombat moves in a backyard
+                tent and filming homemade movies using mannequins with exploding balloon heads. I'm happy to report that my brother's
+                still just as weird and imaginative now as he was back then--plus now he has the most trustworthy beer recommendations. I
+                currently live in Budapest, Hungary, and although he and I have lived in different places in recent years, I'm always so
+                excited to see how awesome of a life he leads in Minnesota. In recent years we've enjoyed trips to Korea and New Zealand
+                together, as well as great times at the cabin. I can't wait to be a part of his and Carolyn's wedding.
+
+
+            %li#reed
+              %h3 Reed Putnam
+              %p
+                Let me first start off by saying how much I adore Mike and Carolyn. They are great human beings and I am lucky to call
+                them my friends. I first met Mike during 7th grade summer. We both had won trips to space camp down in Texas. Mike and I
+                were paired up in a flight simulator machine and the rest is history!
+
+
+            %li#drew
+              %h3 Drew Smith
+              %p
+                Mike has been a close friend to me since we first met about 15 years
+                ago. I have a lot of great memories with Mike: from being geeks in
+                high school, going to cabbies, weekly pizza and beer outings, to
+                karaoke in Tokyo. I remember Mike and Carolyn's initial crush in
+                middle school and I was roommates with Mike during the rekindling in
+                college. I love both Mike and Carolyn and I know how happy they are
+                together. I'm honored to be part of their wedding.
+
+
+            %li#justin
+              %h3 Justin Chase
+              %p
+                I originally met Mike through mutual friends during his time at the UofM. Mike and I both share a love of computers, games
+                and beer and we have spent many occasions enjoying all 3. I am not originally from Minnesota but I have been living here
+                for 16 years and when I first moved from Duluth to the Twin Cities, along with my wife Brittney, Mike was among some of
+                the first friends I made. Mike and Carolyn both came to our wedding a couple of years ago and I'm glad to now be going to
+                theirs as well. I hope to see Mike at some beer festivals, paintball fields and the zombie pub crawl this year!
+
+
+            %li#steve
+              %h3 Steve Duquette
+              %p
+                I met Mike in 6th grade. We've been great friends ever since. Did a lot of goofy things as kids, from German club and
+                starting our own band (HAT) to having an awesome time up north on the lake. Mike and Carolyn have been amazing friends to
+                me and my (new) wife Christine and I'm certain they will be for many years to come!
+
+
+
+            %script{ :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" }
+            %script{ :src => "javascripts/app.js" }
+

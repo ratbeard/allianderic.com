@@ -1,0 +1,152 @@
+@import "compass"
+@import "blueprint"
+
+$font-color:         #2a2a2a
+$link-color:         #0388a6
+$link-hover-color:   #009ce0
+$link-focus-color:   $link-color
+$link-active-color:  $link-color
+$link-visited-color: $link-color
+
+$blueprint-font-family:  'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif
+$blueprint-font-size:    13px
+$blueprint-grid-columns: 12
+$blueprint-grid-width:   60px
+$blueprint-grid-margin:  20px
+
++global-reset
++blueprint-typography
+
+body
+  +blueprint(true)
+a
+  +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+
+img
+  +box-shadow(1px 1px 5px #999)
+
+body ul
+  +no-bullets
+  padding: 0
+  margin: 0
+
+body li
+  padding: 0
+  margin: 0
+
+ul.links
+  +horizontal-list
+  li
+    padding: 0
+    margin: 0
+
+#container
+  +container
+  //+grid-background($blueprint-grid-columns, $blueprint-grid-width, $blueprint-grid-margin)
+
+header
+  +column(12, true)
+  position: relative
+  margin-bottom: 2.5em
+
+  h1
+    position: absolute
+    left: 1.5em
+    bottom: 2.5em
+    color: #111
+    +text-shadow(0px 2px 3px #555)
+  time
+    display: block
+    position: absolute
+    bottom: .5em
+    right: .5em
+    font-size: 2.3em
+    color: #111
+    +text-shadow(0px 2px 3px #555)
+
+section
+  padding-bottom: 1em
+
+  .content
+    padding-top: 2em
+    li
+      display: none
+      &.active
+        display: block
+
+
+.left-col
+  +column(7)
+.right-col
+  +column(5, true)
+
+// ==  Places ==
+section.places
+  margin-top: 6px
+  // border: 1px dashed gray
+  // height: 500px
+
+  .links li
+    padding: 4px 10px
+    +border-radius(5px)
+    // border: 1px solid black
+    font-size: 115%
+    a
+      text-decoration: none
+      color: black
+
+    &.active
+      background: black
+      a
+        color: white
+
+  .content
+    a
+      color: black
+    img
+      width: span(6)
+      display: block
+      margin: 0 0 1.5em
+
+
+// == People ==
+section.people
+  // border: 1px dashed gray
+
+  .links li
+    +column(1)
+    width: 60px
+    height: 90px
+    margin-bottom: 1em
+    +opacity(.5)
+    +transition(opacity, 750ms)
+    &.last
+      +column(1, true)
+    &.active, &:hover
+      +opacity(1)
+
+
+  h3 em
+    color: #444
+    font-style: normal
+
+
+// == Registered ==
+section.registered
+  +column(7)
+
+  img
+    width: $blueprint-grid-width
+    margin-right: 6px
+    +box-shadow(none)
+
+  .crate
+    position: relative
+    top: 1px
+  .macys
+    position: relative
+    top: 3px
+
+
+
+
