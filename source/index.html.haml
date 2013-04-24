@@ -6,7 +6,7 @@ layout: false
 %html{ :lang => "en" }
   %head
     %meta{ :charset => "utf-8" }
-    %title Alli &amp; Eric - 10/15/2011
+    %title Alli &amp; Eric - 6/21/2014
     = stylesheet_link_tag "all.css"
     = yield_content :head
     /[if lte IE 8]
@@ -28,7 +28,7 @@ layout: false
       %header
         = image_tag "", :width => 950, :height => 226, :alt => ""
         %h1 Alli &amp; Eric
-        %time 10/15/2011
+        %time 6/21/2014
       .left-col
         %section.places
           / %h2 Locations
@@ -36,68 +36,57 @@ layout: false
             %li.active
               %a{:href => '#ceremony'} Ceremony
             %li
-              %a{:href => '#reception'} Reception
-            %li
               %a{:href => '#rehearsal'} Rehearsal Dinner
             %li
               %a{:href => '#accommodations'} Accommodations
 
           %ul.content
-            %li#ceremony.active
+            %li#ceremony.activ
               %p
-                The ceremony will take place at <strong>Lake of the Isles Lutheran Church</strong>
-              = image_tag 'church.jpeg'
+                The ceremony and reception will take place at
+                %a{:href => "http://www.grandviewlodge.com/pages/Directions/", :target => "blank"} Grand View Lodge
+                in Nisswa MN.
+              = image_tag 'grandview1.jpg'
               %p
-                The church is located at
-                %a.address{:target => 'blank', :href => "http://maps.google.com/maps?hl=en&ie=UTF8&q=like+of+the+isles+lutheran&fb=1&gl=us&hq=like+of+the+isles+lutheran&hnear=0x52b333909377bbbd:0x939fc9842f7aee07,Minneapolis,+MN&cid=0,0,11548173723552627775&ll=44.962126,-93.305147&spn=0.008761,0.01929&z=16"}
-                  2020 West Lake of the Isles Parkway, Minneapolis, MN.
-              %p
-                There will be plenty of off street parking on West Lake Street as well as 21st Street and Newton Ave S.
-              %p
-                Rich Phenow will be officiating.
+                Grand View Lodge is located 140 miles northwest of Minneapolis, located on the beautiful Gull Lake.
+                There will be parking available for guests not staying on-site, and shuttles for guests staying anywhere on the Grand View property.
 
-            %li#reception
               %p
-                The reception will take place at the <strong>Calhoun Beach Club</strong>
-              = image_tag 'calhoun.jpeg'
-              %p
-                Located at
-                %a.address{:target => 'blank', :href => 'http://maps.google.com/maps?um=1&ie=UTF-8&q=calhoun+beach+club&fb=1&gl=us&hq=calhoun+beach+club&hnear=0x52b333909377bbbd:0x939fc9842f7aee07,Minneapolis,+MN&cid=0,0,14486048597914593360&ei=C_zaTfq3MILq0gHtpOH8Aw&sa=X&oi=local_result&ct=image&resnum=4&ved=0CEoQnwIwAw'}
-                  2925 Dean Parkway, Minneapolis, MN
-              %p
-                Complimentary Valet parking will be available at the entrance.
+                The ceremony will take place on the Grand View Staircase, immediately followed by a reception at the Heritage Center.
+
 
             %li#rehearsal
               %p
-                The rehearsal dinner will take place at <strong><a href="http://www.pinstripes.com/index.html">Pinstripes</a></strong>.
-              = image_tag 'pinstripes.jpeg'
+                The rehearsal dinner will take place at
+                %a{:href => "http://www.grandviewlodge.com/pages/Freddys/", :target => "_blank"} Freddy’s
+                at Grand View Lodge.
+              = image_tag 'grandview2.jpg'
               %p
-                Located at
-                %a.address{:target => 'blank', :href => 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=pinstripes&aq=&sll=44.951269,-93.31388&sspn=0.007714,0.01929&gl=us&ie=UTF8&hq=pinstripes&hnear=&ll=44.910359,-93.320618&spn=0.129596,0.308647&z=12&iwloc=A'}
-                  3849 Gallagher Drive, Edina, MN
+                Located on The Pines Golf Course.
               %p
                 Additional details for those attending will be sent in a formal invitation.
 
             %li#accommodations
               %p
-                Friends and family can stay at the <strong>Westin</strong> in Edina.
-              = image_tag 'westin.jpeg'
+                Guests can stay at Grand View, or at a number of other hotels in the area.
+              = image_tag 'grandview3.jpg'
+              %h4 Grand View
               %p
-                Located at
-                %a.address{:target => 'blank', :href => 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=westin+edina&aq=&sll=44.878255,-93.322699&sspn=0.007724,0.01929&gl=us&ie=UTF8&hq=westin+edina&hnear=&ll=44.878255,-93.322699&spn=0.007724,0.01929&z=16&iwloc=A'}
-                  3201 Galleria, Edina, MN
+                If you would like to stay at Grand View Lodge, there is a 2-night minimum. Please also note that if you would like a room in the Main Lodge, you must purchase a meal plan, however there are several other options on the Grand View property other than the main lodge. Rooms book fast, so please book your room as soon as possible (beginning July 6th). There are a number of lodging options from private rooms to large cabins. Call reservations at <span style="white-space:nowrap;">1-800-432-3788</span> or visit their <a href="https://gc.synxis.com/rez.aspx?Hotel=53521&Chain=13083" target="_blank">website</a> to book your room.
+              %h4 Holiday Inn Express Brainerd
               %p
-                You can reserve a room at our group rate of $119
-                <a href="http://www.starwoodmeeting.com/Book/FRAWLEYEUSON" target="blank"> here</a> by clicking the <em>Book Now</em> button
-                (Note - this link isn't working in Chrome).  Please book your room by September 19th to get the group rate.
+                The Holiday Inn is located 10 miles south of Grand View off of Highway 371. Modern facilities include an indoor pool and wi-fi. Call reservations at 1-888-465-4329 or visit their <a href="http://www.ihg.com/holidayinnexpress/hotels/us/en/baxter/bwxbb/hoteldetail" target="_blank">website</a> to book your room.
+              %h4 Personal Cabin Rentals
               %p
-                Shuttle transportation will be provided from the Westin to the Ceremony and Reception.
-                Transportation will also leave from the Reception back to the Hotel two times throughout the evening.
+                If you are planning to stay with a large group, you could try personal home rental sites like <a href="http://www.vrbo.com/" target="_blank">vrbo.com</a>. This is an option for larger groups not wanting to stay on the Grand View property, but wanting a cabin-feel for their stay. Reference the address for Grand View Lodge to find a rental nearby.
+
+
+
 
         %section.registered
           %h2 Registry
           %p
-            More info to come
+            More info to come.
 
 
 
@@ -106,10 +95,7 @@ layout: false
 
           %h2 About Us
           %p
-            We’ve known each other since middle school but it all started with holding hands
-            at Cheapskate Rollergarden at a 9th grade birthday party - Carolyn formed a crush but Mike needed a little more time. Fast
-            forward to a college house party sophomore year when we rekindled the original sparks from our former roller skating days,
-            and the rest is history. We are so excited to celebrate our marriage with all of our Friends and Family. See you in October!
+            We met in 2009 at the University of Minnesota. We routinely sat next to each other in our International Business class, and Eric asked if I wanted to study for the final on the last day of class. I had of course already studied the entire semester’s worth of notes, but thought Eric was pretty cute so decided to meet him at the Purple Onion to “study” anyways. One month later we were practically together every day. Eric spent the next two summers working in North Dakota on his College Pro business, and I moved to Austin, Texas in 2011 for General Mills, but the distance never separated us. No matter the cost of the plane ticket or the time it took, we made an effort to see each other every three weeks. After the long wait, we are very happily together living in Southwest Minneapolis with our new dog Peanut. Having been to Ireland, England, and Croatia together, we love to travel, and look forward to exploring many new countries together. We think we were pretty lucky to find each other, and can’t wait for our life together ahead. Looking forward to celebrating with you next summer!
 
           %h2 Wedding Party
           %ul.links
