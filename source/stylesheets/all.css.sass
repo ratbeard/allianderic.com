@@ -19,6 +19,8 @@ $blueprint-grid-margin:  20px
 
 body
   +blueprint(true)
+  h1,h2,h3,h4,h5,h6
+    color: #251414
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
@@ -48,16 +50,15 @@ header
     position: absolute
     left: 1.5em
     bottom: 2.5em
-    color: #111
-    +text-shadow(0px 2px 3px #555)
+    +text-shadow(0px 2px 3px rgb(87, 71, 71))
   time
     display: block
     position: absolute
     bottom: .5em
     right: .5em
     font-size: 2.3em
-    color: #111
-    +text-shadow(0px 2px 3px #555)
+    +text-shadow(0px 2px 3px rgb(87, 71, 71))
+
 
 section
   padding-bottom: 1em
@@ -86,11 +87,11 @@ section.places
     font-size: 1.3em
     a
       text-decoration: none
-      color: #555
+      color: #666
     &.active
       a
-        color: black
-        border-bottom: 1px solid black
+        color: #3d1f1f
+        border-bottom: 1px solid #3d1f1f
         padding-bottom: 2px
 
   .content
