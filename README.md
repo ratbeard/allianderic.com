@@ -1,5 +1,8 @@
 Another award-winning wedding website!!!
 
+development:
+
+		bundle exec middleman server
 
 deploy:
 
